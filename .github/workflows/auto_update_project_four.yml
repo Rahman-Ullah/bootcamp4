@@ -28,6 +28,7 @@ jobs:
 
     # Runs a single command using the runners shell
     - name: Installing yarn
+    # installing yarn
     - uses: borales/actions-yarn@v2.0.0
       with:
         cmd: install # install yarn form cmd 
@@ -35,7 +36,11 @@ jobs:
     # Runs a set of commands using the runners shell
     - name: bulid react app
       run: yarn bulid
+    
+    # installing surge after bulid
     - name: install surge
       run: npm install --global surge
+    
+    # deploying project surge
     - name: deploying project surge
       run: surge ./bulid bootcamp4.surge.sh --token ${{ secrets.NEW_TOKEN}}
