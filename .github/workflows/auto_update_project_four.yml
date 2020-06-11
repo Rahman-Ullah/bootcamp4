@@ -27,7 +27,6 @@ jobs:
         node-version: 12 
 
     # Runs a single command using the runners shell
-    - name: Installing yarn
     # installing yarn
     - uses: borales/actions-yarn@v2.0.0
       with:
